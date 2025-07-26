@@ -1,6 +1,57 @@
-<!DOCTYPE html> <html> <head> <title>Sourav Sarangi</title> <link rel="stylesheet" href="style.css"> </head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films by Sourav Sarangi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <header> <h1>Creations by Sourav Sarangi! 🎉</h1> </header> <main> <p>Website Co-created by Aveek</p> 
-    <button id="counter">Clicks: 0</button>
-  </main> <script src="script.js"></script> </body>
+  <!-- Hero Video Header -->
+  <header class="video-header">
+    <video autoplay muted loop>
+      <source src="assets/showreel.mp4" type="video/mp4">
+    </video>
+    <div class="header-content">
+      <h1>[Director Name]</h1>
+      <p>Cinematic Storyteller</p>
+    </div>
+  </header>
+
+  <!-- Filmography Timeline -->
+  <section id="filmography">
+    <h2>Filmography</h2>
+    <div class="timeline">
+      <!-- Example Entry -->
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <img src="assets/movie-poster-1.jpg" alt="Movie Title">
+          <h3>Movie Title</h3>
+          <p>Director | Writer</p>
+          <a href="#" class="btn-trailer">Watch Teaser</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Clips Grid -->
+  <section id="clips">
+    <h2>Selected Scenes</h2>
+    <div class="clip-grid">
+      <div class="clip-item">
+        <iframe src="https://www.youtube.com/embed/YOUTUBE_ID?autoplay=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press Kit -->
+  <section id="press">
+    <h2>Press Kit</h2>
+    <a href="LINK_TO_GOOGLE_DRIVE_ZIP" class="btn-download">Download Press Materials</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
