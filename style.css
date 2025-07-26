@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; text-align: center;
+}
+button { padding: 0.5rem 1rem; background: #2ea44f; color: white; border: none; border-radius: 5px; cursor: pointer;
+}
