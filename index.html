@@ -3,187 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentary Filmmaker | Sourav Sarangi Collaborating with Indigenous Communities</title>
+  <title>Your Name | Indigenous Documentary Filmmaker</title>
+  <meta name="description" content="Collaborative films made with Indigenous communities">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Hand-drawn font for headings -->
-  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-  <!-- Clean font for body -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Add these ABOVE your existing script.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- ScrollMagic/GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
 </head>
 <body>
-  <!-- Land Acknowledgement Banner -->
-  <header class="land-acknowledgement">
-    <p>I work on the traditional territories of the <span id="community-name">Bengal</span>. <a href="/land-statement">Learn more</a>.</p>
+  <!-- Header with Director Portrait -->
+  <header class="director-header">
+    <img src="assets/media/images/director-portrait.webp" 
+         alt="[Your Name] with community members" 
+         class="director-portrait"
+         width="80" height="80">
+    <div class="director-info">
+      <h1 class="director-name">Your Name</h1>
+      <p class="director-title">Documentary Filmmaker</p>
+    </div>
   </header>
 
-  <!-- Hero Section with Ambient Sound -->
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Stories Woven Together</h1>
-    <p>Documentary filmmaker & editor centering Indigenous voices.</p>
-    <button id="sound-toggle">🔊 Play Ambient Sound</button>
-    <audio id="ambient-sound" loop>
-      <source src="forest-ambience.mp3" type="audio/mpeg">
-    </audio>
-  </section>
-<!-- Add this to your HTML -->
-<section class="hero">
-  <!-- Background video (ensure community consent for footage) -->
-  <video autoplay muted loop id="hero-video">
-    <source src="landing-video.mp4" type="video/mp4">
-    <!-- Fallback image -->
-    <img src="landing-fallback.jpg" alt="Community gathering">
-  </video>
-  
-  <div class="hero-content">
-    <h1>
-      <span class="title-line">Weaving Stories</span>
-      <span class="title-line">With the Land</span>
-    </h1>
-    <p class="subtitle">Documentary films co-created with Indigenous communities</p>
-    
-    <!-- Animated scroll prompt -->
-    <div class="scroll-prompt">
-      <svg class="scroll-arrow" viewBox="0 0 24 24">
-        <path d="M7,10l5,5l5-5H7z" fill="currentColor"/>
-      </svg>
-    </div>
-  </div>
-  
-  <!-- Land acknowledgement (fixed at bottom) -->
-  <div class="land-acknowledgement">
-    <p>Filmed on the ancestral lands of the <strong>Anishinaabe</strong>, <strong>Haudenosaunee</strong>, and <strong>Lunaapeew</strong> peoples. <a href="/land">Read full acknowledgement</a></p>
-  </div>
-</section>
-  <!-- Interactive Map -->
-  <section class="map-section">
-    <h2>Where I've Collaborated</h2>
-    <div class="indigenous-map">
-      <div class="map-region" data-region="amazon" data-audio="amazon.mp3">
-        <div class="region-tooltip">Amazon Basin</div>
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="assets/media/videos/hero-background.mp4" type="video/mp4">
+      <img src="assets/media/images/hero-fallback.webp" alt="Community gathering">
+    </video>
+    <div class="hero-content">
+      <h1>
+        <span class="title-line">Weaving Stories</span>
+        <span class="title-line">With the Land</span>
+      </h1>
+      <div class="scroll-prompt">
+        <svg class="scroll-arrow" viewBox="0 0 24 24">
+          <path d="M7,10l5,5l5-5H7z" fill="currentColor"/>
+        </svg>
       </div>
-      <div class="map-region" data-region="arctic" data-audio="arctic.mp3">
-        <div class="region-tooltip">Arctic</div>
-      </div>
-      <!-- Add more regions -->
     </div>
-    <div class="map-story" id="map-story">
-      <p>Click a region to hear a greeting and learn about the project.</p>
+    <div class="land-acknowledgement">
+      <p>Filmed on ancestral lands of the <strong>Anishinaabe</strong>, <strong>Haudenosaunee</strong>, and <strong>Lunaapeew</strong> peoples. <a href="/land">Read more</a></p>
     </div>
   </section>
 
-  <!-- Two-Eyed Seeing Gallery -->
-  <section class="gallery">
-    <h2>Films & Collaborations</h2>
-    <div class="project-tabs">
-      <button class="tab-button active" data-tab="film">The Film</button>
-      <button class="tab-button" data-tab="process">The Collaboration</button>
-    </div>
-    <div class="tab-content">
-      <div id="film" class="tab-pane active">
-        <video controls poster="film-poster.jpg">
-          <source src="film-trailer.mp4" type="video/mp4">
-        </video>
+  <!-- Story Weaving Timeline -->
+  <section class="timeline-section">
+    <h2>Story Weaving Process</h2>
+    <div class="timeline-container">
+      <div class="thread"></div>
+      <div class="timeline-item" data-year="Research">
+        <div class="timeline-knot" data-audio="assets/media/audio/research-audio.mp3"></div>
+        <div class="timeline-content">
+          <h3>Research & Listening</h3>
+          <p>Months spent in community meetings before filming.</p>
+          <button class="reveal-btn">Hear Notes</button>
+        </div>
       </div>
-      <div id="process" class="tab-pane">
-        <img src="workshop-photo.jpg" alt="Community editing workshop">
-        <blockquote>"We decided together how to frame this story." — Community Elder</blockquote>
-      </div>
+      <!-- Add more timeline items -->
     </div>
   </section>
-<!-- Story Weaving Timeline -->
-<section class="timeline-section">
-  <h2>Story Weaving Process</h2>
-  <div class="timeline-container">
-    <!-- Thread Line -->
-    <div class="thread"></div>
-    
-    <!-- Timeline Items -->
-    <div class="timeline-item" data-year="Research">
-      <div class="timeline-knot"></div>
-      <div class="timeline-content">
-        <h3>Research & Listening</h3>
-        <p>Months spent in community meetings before filming.</p>
-        <button class="reveal-btn" data-audio="research-audio.mp3">Hear Notes</button>
-      </div>
-    </div>
 
-    <div class="timeline-item" data-year="Filming">
-      <div class="timeline-knot"></div>
-      <div class="timeline-content">
-        <h3>Co-Filming</h3>
-        <p>Community members operated second cameras.</p>
-        <button class="reveal-btn" data-audio="filming-audio.mp3">Hear Field Recording</button>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-year="Editing">
-      <div class="timeline-knot"></div>
-      <div class="timeline-content">
-        <h3>Collaborative Editing</h3>
-        <p>Shared rough cuts for feedback with elders.</p>
-        <button class="reveal-btn" data-audio="editing-audio.mp3">Play Community Feedback</button>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Projects Grid -->
   <section class="featured-projects">
-  <h2>Co-Created Stories</h2>
-  
-  <div class="project-grid">
-    <!-- Project 1 -->
-    <a href="/project1" class="project-card">
-      <img src="project1-thumb.jpg" alt="Water protectors film">
-      <div class="project-overlay">
-        <h3>Voices of the River</h3>
-        <p>With the Anishinaabe Water Keepers</p>
-      </div>
-    </a>
-    
-    <!-- Project 2 -->
-    <a href="/project2" class="project-card">
-      <img src="project2-thumb.jpg" alt="Language revitalization">
-      <div class="project-overlay">
-        <h3>Speaking the Land</h3>
-        <p>Lunaapeew language documentary</p>
-      </div>
-    </a>
-    
-    <!-- Add more projects -->
-  </div>
-</section>
-  <section class="process-statement">
-  <div class="process-content">
-    <h2>Our Collaborative Way</h2>
-    <div class="process-steps">
-      <div class="step">
-        <div class="step-icon">1</div>
-        <h3>Community Consent</h3>
-        <p>Every project begins with formal agreements and shared decision-making.</p>
-      </div>
-      <div class="step">
-        <div class="step-icon">2</div>
-        <h3>Co-Creation</h3>
-        <p>Community members join as co-directors, editors, and storytellers.</p>
-      </div>
-      <div class="step">
-        <div class="step-icon">3</div>
-        <h3>Ongoing Stewardship</h3>
-        <p>Films remain under partial community ownership with shared revenue.</p>
-      </div>
+    <h2>Co-Created Stories</h2>
+    <div class="project-grid">
+      <a href="/project1" class="project-card">
+        <img src="assets/media/images/project1-thumb.webp" 
+             alt="Water protectors film" 
+             loading="lazy">
+        <div class="project-overlay">
+          <h3>Voices of the River</h3>
+          <p>With the Anishinaabe Water Keepers</p>
+        </div>
+      </a>
+      <!-- Add more projects -->
     </div>
-    <a href="/process" class="cta-button">Learn About Our Framework</a>
-  </div>
-</section>
-  <!-- Footer with Ethical Media Statement -->
-  <footer>
-    <p>All media used with consent. <a href="/permissions">See permissions</a>.</p>
-  </footer>
+  </section>
 
   <script src="script.js"></script>
 </body>
