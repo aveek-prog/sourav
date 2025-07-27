@@ -49,3 +49,32 @@ tabButtons.forEach(button => {
     document.getElementById(tabId).classList.add('active');
   });
 });
+// Story Weaving Timeline Animations
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize ScrollMagic
+  const controller = new ScrollMagic.Controller();
+
+  // Animate timeline items
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    new ScrollMagic.Scene({
+      triggerElement: item,
+      triggerHook: 0.8,
+      reverse: false
+    })
+    .setTween(gsap.from(item, { 
+      opacity: 0, 
+      y: 50, 
+      duration: 0.5 
+    }))
+    .addTo(controller);
+  });
+
+  // Play audio on button click
+  document.querySelectorAll('.reveal-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const audioFile = e.target.getAttribute('data-audio');
+      const audio = new Audio(audioFile);
+      audio.play();
+    });
+  });
+});
