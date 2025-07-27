@@ -31,7 +31,35 @@
       <source src="forest-ambience.mp3" type="audio/mpeg">
     </audio>
   </section>
-
+<!-- Add this to your HTML -->
+<section class="hero">
+  <!-- Background video (ensure community consent for footage) -->
+  <video autoplay muted loop id="hero-video">
+    <source src="landing-video.mp4" type="video/mp4">
+    <!-- Fallback image -->
+    <img src="landing-fallback.jpg" alt="Community gathering">
+  </video>
+  
+  <div class="hero-content">
+    <h1>
+      <span class="title-line">Weaving Stories</span>
+      <span class="title-line">With the Land</span>
+    </h1>
+    <p class="subtitle">Documentary films co-created with Indigenous communities</p>
+    
+    <!-- Animated scroll prompt -->
+    <div class="scroll-prompt">
+      <svg class="scroll-arrow" viewBox="0 0 24 24">
+        <path d="M7,10l5,5l5-5H7z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Land acknowledgement (fixed at bottom) -->
+  <div class="land-acknowledgement">
+    <p>Filmed on the ancestral lands of the <strong>Anishinaabe</strong>, <strong>Haudenosaunee</strong>, and <strong>Lunaapeew</strong> peoples. <a href="/land">Read full acknowledgement</a></p>
+  </div>
+</section>
   <!-- Interactive Map -->
   <section class="map-section">
     <h2>Where I've Collaborated</h2>
@@ -102,6 +130,54 @@
         <button class="reveal-btn" data-audio="editing-audio.mp3">Play Community Feedback</button>
       </div>
     </div>
+  </div>
+</section>
+  <section class="featured-projects">
+  <h2>Co-Created Stories</h2>
+  
+  <div class="project-grid">
+    <!-- Project 1 -->
+    <a href="/project1" class="project-card">
+      <img src="project1-thumb.jpg" alt="Water protectors film">
+      <div class="project-overlay">
+        <h3>Voices of the River</h3>
+        <p>With the Anishinaabe Water Keepers</p>
+      </div>
+    </a>
+    
+    <!-- Project 2 -->
+    <a href="/project2" class="project-card">
+      <img src="project2-thumb.jpg" alt="Language revitalization">
+      <div class="project-overlay">
+        <h3>Speaking the Land</h3>
+        <p>Lunaapeew language documentary</p>
+      </div>
+    </a>
+    
+    <!-- Add more projects -->
+  </div>
+</section>
+  <section class="process-statement">
+  <div class="process-content">
+    <h2>Our Collaborative Way</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-icon">1</div>
+        <h3>Community Consent</h3>
+        <p>Every project begins with formal agreements and shared decision-making.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">2</div>
+        <h3>Co-Creation</h3>
+        <p>Community members join as co-directors, editors, and storytellers.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">3</div>
+        <h3>Ongoing Stewardship</h3>
+        <p>Films remain under partial community ownership with shared revenue.</p>
+      </div>
+    </div>
+    <a href="/process" class="cta-button">Learn About Our Framework</a>
   </div>
 </section>
   <!-- Footer with Ethical Media Statement -->
