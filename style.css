@@ -1,89 +1,91 @@
-/* Cinematic Dark Theme */
+/* Earth tone palette */
 :root {
-  --dark: #0a0a0a;
-  --gold: #d4af37;
-  --light: #f5f5f5;
+  --clay: #9C6D4D;
+  --forest: #3A5A40;
+  --ochre: #C08552;
+  --paper: #F5F0E8;
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background: var(--dark);
-  color: var(--light);
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--paper);
+  color: #333;
   line-height: 1.6;
+  margin: 0;
 }
 
-/* Video Header */
-.video-header {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+/* Hand-drawn headings */
+h1, h2 {
+  font-family: 'Rock Salt', cursive;
+  color: var(--forest);
 }
 
-.video-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0.7;
-}
-
-.header-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.land-acknowledgement {
+  background-color: var(--clay);
+  color: white;
+  padding: 10px;
   text-align: center;
-  z-index: 2;
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(rgba(0,0,0,0.3), url('landscape.jpg') no-repeat center/cover;
+  color: white;
 }
 
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background: var(--gold);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-}
-
-.timeline-item {
-  padding: 10px 40px;
-  position: relative;
-  width: 50%;
-  box-sizing: border-box;
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
-}
-
-/* Clip Grid */
-.clip-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/* Interactive Map */
+.indigenous-map {
+  display: flex;
+  justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
 }
 
-.clip-item iframe {
-  width: 100%;
-  height: 200px;
+.map-region {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--ochre);
+  position: relative;
+  cursor: pointer;
   transition: transform 0.3s;
 }
 
-.clip-item:hover iframe {
-  transform: scale(1.03);
+.map-region:hover {
+  transform: scale(1.1);
+}
+
+/* Two-Eyed Seeing Tabs */
+.tab-content {
+  border: 1px solid var(--clay);
+  padding: 20px;
+}
+
+.tab-button {
+  background: var(--forest);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background: var(--ochre);
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Ethical Media Footer */
+footer {
+  background: var(--forest);
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
