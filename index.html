@@ -3,54 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Films by Sourav Sarangi</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Documentary Filmmaker | Sourav Sarangi Collaborating with Indigenous Communities</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Hand-drawn font for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <!-- Clean font for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero Video Header -->
-  <header class="video-header">
-    <video autoplay muted loop>
-      <source src="assets/showreel.mp4" type="video/mp4">
-    </video>
-    <div class="header-content">
-      <h1>[Director Name]</h1>
-      <p>Cinematic Storyteller</p>
-    </div>
+  <!-- Land Acknowledgement Banner -->
+  <header class="land-acknowledgement">
+    <p>I work on the traditional territories of the <span id="community-name">Bengal</span>. <a href="/land-statement">Learn more</a>.</p>
   </header>
 
-  <!-- Filmography Timeline -->
-  <section id="filmography">
-    <h2>Filmography</h2>
-    <div class="timeline">
-      <!-- Example Entry -->
-      <div class="timeline-item">
-        <div class="timeline-year">2023</div>
-        <div class="timeline-content">
-          <img src="assets/movie-poster-1.jpg" alt="Movie Title">
-          <h3>Movie Title</h3>
-          <p>Director | Writer</p>
-          <a href="#" class="btn-trailer">Watch Teaser</a>
-        </div>
+  <!-- Hero Section with Ambient Sound -->
+  <section class="hero">
+    <h1>Stories Woven Together</h1>
+    <p>Documentary filmmaker & editor centering Indigenous voices.</p>
+    <button id="sound-toggle">🔊 Play Ambient Sound</button>
+    <audio id="ambient-sound" loop>
+      <source src="forest-ambience.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <!-- Interactive Map -->
+  <section class="map-section">
+    <h2>Where I've Collaborated</h2>
+    <div class="indigenous-map">
+      <div class="map-region" data-region="amazon" data-audio="amazon.mp3">
+        <div class="region-tooltip">Amazon Basin</div>
+      </div>
+      <div class="map-region" data-region="arctic" data-audio="arctic.mp3">
+        <div class="region-tooltip">Arctic</div>
+      </div>
+      <!-- Add more regions -->
+    </div>
+    <div class="map-story" id="map-story">
+      <p>Click a region to hear a greeting and learn about the project.</p>
+    </div>
+  </section>
+
+  <!-- Two-Eyed Seeing Gallery -->
+  <section class="gallery">
+    <h2>Films & Collaborations</h2>
+    <div class="project-tabs">
+      <button class="tab-button active" data-tab="film">The Film</button>
+      <button class="tab-button" data-tab="process">The Collaboration</button>
+    </div>
+    <div class="tab-content">
+      <div id="film" class="tab-pane active">
+        <video controls poster="film-poster.jpg">
+          <source src="film-trailer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div id="process" class="tab-pane">
+        <img src="workshop-photo.jpg" alt="Community editing workshop">
+        <blockquote>"We decided together how to frame this story." — Community Elder</blockquote>
       </div>
     </div>
   </section>
 
-  <!-- Video Clips Grid -->
-  <section id="clips">
-    <h2>Selected Scenes</h2>
-    <div class="clip-grid">
-      <div class="clip-item">
-        <iframe src="https://www.youtube.com/embed/YOUTUBE_ID?autoplay=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Press Kit -->
-  <section id="press">
-    <h2>Press Kit</h2>
-    <a href="LINK_TO_GOOGLE_DRIVE_ZIP" class="btn-download">Download Press Materials</a>
-  </section>
+  <!-- Footer with Ethical Media Statement -->
+  <footer>
+    <p>All media used with consent. <a href="/permissions">See permissions</a>.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
